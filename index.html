@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARAL</title>
+    <link rel="icon" href="https://i.ibb.co/b5dWMKLF/x.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #3A5B52;
+            padding-top: 70px;
+        }
+        .header {
+            background-color: #040720;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .header {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+         .circle-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .circle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .card { position: relative; border: 1px solid #ccc; border-radius: 20px; margin: 20px; padding: 30px; background-color: #fff; cursor: pointer; font-size: 20px; font-weight: bold; transition: background-color 0.3s, transform 0.3s; border-left: 6px solid #7133FF; }
+
+        .second-card { font-size: 20px; padding: 25px; width: 75%; margin: 20px auto; border-radius: 10px; border-left: 6px solid #FF5733; }
+         
+       .third-card { font-size: 20px; padding: 25px; width: 75%; margin: 20px auto; border-radius: 10px; border-left: 6px solid #FF5733; }
+
+        .card svg { position: absolute; top: 50%; right: 20px; transform: translateY(-50%); fill: #7133FF; }
+
+        .second-card svg { fill: #FF5733; }
+        .third-card svg { fill: #FF5733; }
+        
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(113, 51, 255, 0.5), 0 6px 15px rgba(113, 51, 255, 0.3);
+        }
+
+       .second-card:hover {
+           transform: translateY(-5px);
+           box-shadow: 0 4px 10px rgba(255, 87, 51, 0.5), 0 6px 15px rgba(255, 87, 51, 0.3);
+        }
+        
+      .third-card:hover {
+           transform: translateY(-5px);
+           box-shadow: 0 4px 10px rgba(255, 87, 51, 0.5), 0 6px 15px rgba(255, 87, 51, 0.3);
+        }
+        
+
+        .subcards {
+            display: none;
+            padding-left: 20px;
+        }
+
+       .subcard { position: relative; border: 1px solid #ddd; border-radius: 5px; margin: 10px 0; padding: 10px; background-color: #fff; cursor: pointer; font-size: 15px; font-weight: bold; transition: background-color 1s, transform 1s; border-left: 6px solid #00FFFF; }
+
+       .subcard svg {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            fill: #00FFFF;
+            opacity: 0;
+            transition: opacity 0.3s;
+       }
+
+       .subcard:hover svg {
+            opacity: 1;
+       }
+
+       .subcard:hover {
+           transform: translateY(-5px);
+           box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5), 0 6px 15px rgba(0, 255, 255, 0.3);
+       }
+
+      .button-container {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          z-index: 1000;
+      }
+
+      .btn {
+          display: flex;
+          align-items: center;
+          background-color: #05a044;
+          color: #fff;
+          border: none;
+          border-radius: 25px;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.3s;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+          text-decoration: none;
+      }
+
+      .btn svg {
+          margin-right: 10px;
+      }
+
+      .btn:hover {
+          background-color: #05a044;
+          transform: translateY(-3px);
+      }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+         <marquee behavior="alternate" direction="left" scrollamount="2" width="100%" height="30" onmouseover="this.stop()" onmouseout="this.start()" loop="10000" style="animation: slide 5s linear infinite alternate; font-size: 2em; color: yellow;">By HACKHEIST 😈</marquee>
+    </div>
+     <div class="circle-image">
+        <img src="https://i.ibb.co/b5dWMKLF/x.jpg" alt="Profile Image">
+    </div>
+
+    <h2 id="subject-title" class="title">𝗦𝗔𝗥𝗔𝗟</h2>
+
+  <p style="color:#00FFDA; font-size:16px;">𝗦𝗰𝗿𝗼𝗹𝗹 𝗗𝗼𝘄𝗻 𝗳𝗼𝗿 𝗖𝗼𝗻𝘁𝗮𝗰𝘁 𝗮𝗻𝗱 𝗳𝗼𝗿 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 👇👇</p>
+</div>
+ <div style="display: flex; justify-content: center; height: 8vh;">
+  <button style="background-color:#34C759; color:white; padding:15px 40px; font-size:24px; border-radius: 40px;"><a href="https://yashyasag.github.io/hiddens_officials" style="color:white; text-decoration:none;">𝗢𝘂𝗿 𝗠𝗔𝗜𝗡 𝗪𝗲𝗯𝘀𝗶𝘁𝗲</a></button>
+</div>
+    <div id="cards-container">
+         <!-- Cards div through JS -->
+    </div>
+
+    <div class="button-container">
+         <a href="https://t.me/HIDDEN_OFFICIALS_3" class="btn" target="_blank" rel="noopener noreferrer">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+          </svg>
+          <span>JOiN BACKUP</span>
+       </a>
+    </div>
+
+<script>
+const firstcardsData = [
+         {
+        text: '𝗖𝗟𝗔𝗦𝗦 𝟭𝟭𝘁𝗵',
+        secondcards: [
+            {
+                text: '𝐏𝐇𝐘𝐒𝐈𝐂𝐒 ',
+                subcards: [
+                    { text: 'Unit and Dimension', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MTc2MDc1NDM1MzczMDA4LTI4MTc4MDgwNDIxODgzNzQ0' },
+{ text: 'Vector', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MTc5MDgyOTE1MTM5MTEyLTI4MTg2MTAwMzY3OTI2Njg4' },
+{ text: 'Kinematics 1D', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MTg3MTAyODYxMTgyMDU2LTI4MjAzMTQyNzUzMjY3OTQ0' },
+{ text: 'Kinematics 2D', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MjA0MTQ1MjQ2NTIzMzEyLTI4MjEyMTY1MTkyNTY2MjU2' },
+{ text: 'Newton Laws of Motion', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MjEzMTY3Njg1ODIxNjI0LTI4MjIxMTg3NjMxODY0NTY4' },
+{ text: 'Friction', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MjIyMTkwMTI1MTE5OTM2LTI4MjI4MjA1MDg0NjUyMTQ0' },
+{ text: 'Circular Motion', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MjI5MjA3NTc3OTA3NTEyLTI4MjM3MjI3NTIzOTUwNDU2' },
+{ text: 'Work Power Energy', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MjM4MjMwMDE3MjA1ODI0LTI4MjUwMjU5OTM2MjcwMjQw' },
+{ text: 'Center of Mass & Collision', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MjUxMjYyNDI5NTI1NjA4LTI4MjYzMjkyMzQ4NTkwMDI0' },
+{ text: 'Rotation Motion', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MjY0Mjk0ODQxODQ1MzkyLTI4Mjg0MzQ0NzA2OTUyNzUy' },
+{ text: 'Gravitation', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4Mjg1MzQ3MjAwMjA4MTIwLTI4MjkyMzY0NjUyOTk1Njk2' },
+{ text: 'Calorimetry', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MjkzMzY3MTQ2MjUxMDY0LTI4Mjk1MzcyMTMyNzYxODAw' },
+{ text: 'Elasticity', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4Mjk2Mzc0NjI2MDE3MTY4LTI4Mjk4Mzc5NjEyNTI3OTA0' },
+{ text: 'Thermal Expansion', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4Mjk5MzgyMTA1NzgzMjcyLTI4MzAyMzg5NTg1NTQ5Mzc2' },
+{ text: 'Heat Transfer', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MzAzMzkyMDc4ODA0NzQ0LTI4MzExNDEyMDI0ODQ3Njg4' },
+{ text: 'KTG', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MzEyNDE0NTE4MTAzMDU2LTI4MzI0NDQ0NDM3MTY3NDcy' },
+{ text: 'SHM', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MzI1NDQ2OTMwNDIyODQwLTI4MzM4NDc5MzQyNzQyNjI0' },
+{ text: 'Wave on String', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MzM5NDgxODM1OTk3OTkyLTI4MzQ5NTA2NzY4NTUxNjcy' },
+{ text: 'Sound Wave', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MzUwNTA5MjYxODA3MDQwLTI4MzYxNTM2Njg3NjE2MDg4' },
+{ text: 'Fluid Mechanics', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MzYyNTM5MTgwODcxNDU2LTI4MzgwNTg0MDU5NDY4MDgw' }
+                ]
+            },
+            {
+                text: '𝐌𝐀𝐓𝐇𝐄𝐌𝐀𝐓𝐈𝐂𝐒',
+                subcards: [
+                   { text: 'Logarithm', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NTc4MDc1MjMwNzc1NTc2LTI4NTg1MDkyNjgzNTYzMTUy' },
+{ text: 'Compound Angle (Trigonometric Ratios & Identities)', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NTg2MDk1MTc2ODE4NTIwLTI4NjAzMTM3NTYyMTU5Nzc2' },
+{ text: 'Trigonometric Equation', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NjM5MjI3MzE5MzUzMDI0LTI4NjQ3MjQ3MjY1Mzk1OTY4' },
+{ text: 'Application of Trigonometry', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NjYxMjgyMTcwOTcxMTIwLTI4NjYyMjg0NjY0MjI2NDg4' },
+{ text: 'Point', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NjYyMjg0NjY0MjI2NDg4LTI4NjY4Mjk5NjIzNzU4Njk2' },
+{ text: 'Parabola', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NzA3Mzk2ODYwNzE4MDQ4LTI4NzI2NDQ0MjMyNTcwMDQw' },
+{ text: 'Ellipse', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NzI3NDQ2NzI1ODI1NDA4LTI4NzM4NDc0MTUxNjM0NDU2' },
+{ text: 'Hyperbola', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NzM5NDc2NjQ0ODg5ODI0LTI4NzUwNTA0MDcwNjk4ODcy' },
+{ text: 'Principle of Mathematical Induction', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4ODA5NjUxMTcyNzY1NTg0LTI4ODEwNjUzNjY2MDIwOTUy' },
+{ text: 'Sets', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4ODE0NjYzNjM5MDQyNDI0LTI4ODE3NjcxMTE4ODA4NTI4' },
+{ text: 'Quadratic Equation', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NjA0MTQwMDU1NDE1MTQ0LTI4NjIxMTgyNDQwNzU2NDAw' },
+{ text: 'Relation', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4ODE4NjczNjEyMDYzODk2LTI4ODIwNjc4NTk4NTc0NjMy' },
+{ text: 'Function', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4ODIxNjgxMDkxODMwMDAwLTI4ODQyNzMzNDUwMTkyNzI4' },
+{ text: 'Statistics', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4ODAwNjI4NzMzNDY3MjcyLTI4ODA4NjQ4Njc5NTEwMjE2' },
+{ text: 'Sequence & Series', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NjIyMTg0OTM0MDExNzY4LTI4NjM4MjI0ODI2MDk3NjU2' },
+{ text: 'Straight Line', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NjY5MzAyMTE3MDE0MDY0LTI4Njg1MzQyMDA5MDk5OTUy' },
+{ text: 'Circle', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4Njg2MzQ0NTAyMzU1MzIwLTI4NzA2Mzk0MzY3NDYyNjgw' },
+{ text: 'Mathematical Reasoning', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4ODExNjU2MTU5Mjc2MzIwLTI4ODEzNjYxMTQ1Nzg3MDU2' },
+{ text: 'Complex Number', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4Nzg0NTg4ODQxMzgxMzg0LTI4Nzk5NjI2MjQwMjExOTA0' },
+{ text: 'Solution of Triangle', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NjQ4MjQ5NzU4NjUxMzM2LTI4NjYwMjc5Njc3NzE1NzUy' },
+{ text: 'Binomial Theorem', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NzY4NTQ4OTQ5Mjk1NDk2LTI4NzgzNTg2MzQ4MTI2MDE2' },
+{ text: 'Permutation & Combination', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NzUxNTA2NTYzOTU0MjQwLTI4NzY3NTQ2NDU2MDQwMTI4' }
+             ]
+            },
+            {
+                text: '𝐂𝐇𝐄𝐌𝐈𝐒𝐓𝐑𝐘',
+                subcards: [
+                    { text: 'Mole Concept', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NDIxNjg2MjgyOTM4MTY4LTI4NDMwNzA4NzIyMjM2NDgw' },
+{ text: 'Atomic Structure', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4MzgxNTg2NTUyNzIzNDQ4LTI4Mzk1NjIxNDU4Mjk4NjAw' },
+{ text: 'Periodic Table', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4Mzk2NjIzOTUxNTUzOTY4LTI4NDA0NjQzODk3NTk2OTEy' },
+{ text: 'Chemical Bonding', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NDA1NjQ2MzkwODUyMjgwLTI4NDIwNjgzNzg5NjgyODAw' },
+{ text: 'p-Block (Group 13 & 14)', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NTA5OTA1Njg5NDEwNTUyLTI4NTE4OTI4MTI4NzA4ODY0' },
+{ text: 's-Block', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NTAyODg4MjM2NjIyOTc2LTI4NTA4OTAzMTk2MTU1MTg0' },
+{ text: 'Thermodynamics', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NDQ2NzQ4NjE0MzIyMzY4LTI4NDU5NzgxMDI2NjQyMTUy' },
+{ text: 'Thermochemistry', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NDYwNzgzNTE5ODk3NTIwLTI4NDYyNzg4NTA2NDA4MjU2' },
+{ text: 'States of Matter', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NDMxNzExMjE1NDkxODQ4LTI4NDQ1NzQ2MTIxMDY3MDAw' },
+{ text: 'Chemical Equilibrium', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NDYzNzkwOTk5NjYzNjI0LTI4NDcwODA4NDUyNDUxMjAw' },
+{ text: 'Ionic Equilibrium', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NDcxODEwOTQ1NzA2NTY4LTI4NDg3ODUwODM3NzkyNDU2' },
+{ text: 'Redox Reactions', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NDg4ODUzMzMxMDQ3ODI0LTI4NDk1ODcwNzgzODM1NDAw' },
+{ text: 'Hydrogen', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NDk2ODczMjc3MDkwNzY4LTI4NTAxODg1NzQzMzY3NjA4' },
+{ text: 'IUPAC Nomenclature', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NTE5OTMwNjIxOTY0MjMyLTI4NTI3OTUwNTY4MDA3MTc2' },
+{ text: 'Isomerism', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NTQwOTgyOTgwMzI2OTYwLTI4NTQ5MDAyOTI2MzY5OTA0' },
+{ text: 'Hydrocarbon', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NTUwMDA1NDE5NjI1MjcyLTI4NTY4MDUwMjk4MjIxODk2' },
+{ text: 'Environmental Chemistry', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4NTY5MDUyNzkxNDc3MjY0LTI4NTc3MDcyNzM3NTIwMjA4' }
+                ]
+            }
+            ]
+    },
+    {
+        text: '𝗖𝗟𝗔𝗦𝗦 𝟭𝟮𝘁𝗵',
+        secondcards: [
+            {
+                text: '𝐌𝐀𝐓𝐇𝐄𝐌𝐀𝐓𝐈𝐂𝐒',
+                subcards: [
+                   { text: 'Inverse Trigonometric Functions', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MzA0ODgyODQwOTE3Mzc2LTI5MzE4OTE3NzQ2NDkyNTI4' },
+{ text: 'Matrices', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5NDQxMjIxOTIzNjQ3NDI0LTI5NDUzMjUxODQyNzExODQw' },
+{ text: 'Determinant', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5NDU0MjU0MzM1OTY3MjA4LTI5NDYzMjc2Nzc1MjY1NTIw' },
+{ text: 'Limits', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MzE5OTIwMjM5NzQ3ODk2LTI5MzM3OTY1MTE4MzQ0NTIw' },
+{ text: 'Continuity', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MzM4OTY3NjExNTk5ODg4LTI5MzQ2OTg3NTU3NjQyODMy' },
+{ text: 'Differentiability', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MzQ3OTkwMDUwODk4MjAwLTI5MzUzMDAyNTE3MTc1MDQw' },
+{ text: 'Method of Differentiation', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MzU0MDA1MDEwNDMwNDA4LTI5MzY5MDQyNDA5MjYwOTI4' },
+{ text: 'Application of Derivatives', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MzcwMDQ0OTAyNTE2Mjk2LTI5Mzg5MDkyMjc0MzY4Mjg4' },
+{ text: 'Indefinite Integration', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MzkwMDk0NzY3NjIzNjU2LTI5NDA0MTI5NjczMTk4ODA4' },
+{ text: 'Definite Integration', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5NDA1MTMyMTY2NDU0MTc2LTI5NDE3MTYyMDg1NTE4NTky' },
+{ text: 'Application of Integrals (Area Under The Curve)', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5NDE4MTY0NTc4NzczOTYwLTI5NDI3MTg3MDE4MDcyMjcy' },
+{ text: 'Differential Equation', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5NDI4MTg5NTExMzI3NjQwLTI5NDQwMjE5NDMwMzkyMDU2' },
+{ text: 'Vector', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5NDY0Mjc5MjY4NTIwODg4LTI5NDgwMzE5MTYwNjA2Nzc2' },
+{ text: '3-D', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5NDgxMzIxNjUzODYyMTQ0LTI5NDk4MzY0MDM5MjAzNDAw' },
+{ text: 'Probability', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5NDk5MzY2NTMyNDU4NzY4LTI5NTcwNTQzNTUzNTg5ODk2' },
+{ text: 'Linear Programming Problems', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5NTcxNTQ2MDQ2ODQ1MjY0LTI5NTczNTUxMDMzMzU2MDAw' }
+                ]
+            },
+            {
+                text: '𝐂𝐇𝐄𝐌𝐈𝐒𝐓𝐑𝐘',
+                subcards: [
+                    { text: 'Coordination Compounds', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MTYyNTI4Nzk4NjU1MTIwLTI5MTc5NTcxMTgzOTk2Mzc2' },
+{ text: 'Electrochemistry', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MTM2NDYzOTc0MDE1NTUyLTI5MTQ2NDg4OTA2NTY5MjMy' },
+{ text: 'Metallurgy', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MTgwNTczNjc3MjUxNzQ0LTI5MTkyNjAzNTk2MzE2MTYw' },
+{ text: 'p-Block (Group 15 - 18)', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MTkzNjA2MDg5NTcxNTI4LTI5MjE0NjU4NDQ3OTM0MjU2' },
+{ text: 'Chemical Kinetics', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MTEwMzk5MTQ5Mzc1OTg0LTI5MTIyNDI5MDY4NDQwNDAw' },
+{ text: 'Nuclear Chemistry', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MTIzNDMxNTYxNjk1NzY4LTI5MTI5NDQ2NTIxMjI3OTc2' },
+{ text: 'Radioactivity', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MTMwNDQ5MDE0NDgzMzQ0LTI5MTM1NDYxNDgwNzYwMTg0' },
+{ text: 'Liquid Solution', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDc5MzIxODU4NDU5NTc2LTI5MDkxMzUxNzc3NTIzOTky' },
+{ text: 'Surface Chemistry', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MTQ3NDkxMzk5ODI0NjAwLTI5MTYxNTI2MzA1Mzk5NzUy' },
+{ text: 'Solid State', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDY1Mjg2OTUyODg0NDI0LTI5MDc4MzE5MzY1MjA0MjA4' },
+{ text: 'd & f Block', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MjczODA1NTUwMDAwOTY4LTI5Mjc3ODE1NTIzMDIyNDQw' },
+{ text: 'Optical Isomerism', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDkyMzU0MjcwNzc5MzYwLTI5MDk4MzY5MjMwMzExNTY4' },
+{ text: 'Haloalkane and Haloarenes', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDk5MzcxNzIzNTY2OTM2LTI5MTA5Mzk2NjU2MTIwNjE2' },
+{ text: 'Alcohol Ether and Phenol', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MjE1NjYwOTQxMTg5NjI0LTI5MjI1Njg1ODczNzQzMzA0' },
+{ text: 'Carbonyl Compounds', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MjI2Njg4MzY2OTk4NjcyLTI5MjMyNzAzMzI2NTMwODgw' },
+{ text: 'Oxidation Reduction', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MjMzNzA1ODE5Nzg2MjQ4LTI5MjM5NzIwNzc5MzE4NDU2' },
+{ text: 'Carboxylic Acid and Amines', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MjQwNzIzMjcyNTczODI0LTI5MjQ3NzQwNzI1MzYxNDAw' },
+{ text: 'Salt Analysis', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MjQ4NzQzMjE4NjE2NzY4LTI5MjcyODAzMDU2NzQ1NjAw' },
+{ text: 'Biomolecules', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5Mjc4ODE4MDE2Mjc3ODA4LTI5Mjg3ODQwNDU1NTc2MTIw' },
+{ text: 'Polymer', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5Mjg4ODQyOTQ4ODMxNDg4LTI5Mjk1ODYwNDAxNjE5MDY0' },
+{ text: 'Chemistry in Everyday Life', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5Mjk2ODYyODk0ODc0NDMyLTI5MzAzODgwMzQ3NjYyMDA4' }
+                ]
+            },
+            {
+                text: '𝐏𝐇𝐘𝐒𝐈𝐂𝐒',
+                subcards: [
+                    { text: 'Electrostatics', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4ODQ4NzQ4NDA5NzI0OTM2LTI4ODc4ODIzMjA3Mzg1OTc2' },
+{ text: 'Current Electricity', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4ODc5ODI1NzAwNjQxMzQ0LTI4ODk0ODYzMDk5NDcxODY0' },
+{ text: 'Capacitor', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4ODk1ODY1NTkyNzI3MjMyLTI4OTA3ODk1NTExNzkxNjQ4' },
+{ text: 'EM Waves', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDEyMTU0ODEwMzQ5OTIwLTI5MDE1MTYyMjkwMTE2MDI0' },
+{ text: 'EMI', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4OTM4OTcyODAyNzA4MDU2LTI4OTUyMDA1MjE1MDI3ODQw' },
+{ text: 'Alternating Current', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4OTUzMDA3NzA4MjgzMjA4LTI4OTY2MDQwMTIwNjAyOTky' },
+{ text: 'Wave Optics', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDAwMTI0ODkxMjg1NTA0LTI5MDExMTUyMzE3MDk0NTUy' },
+{ text: 'Semiconductors', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDQ4MjQ0NTY3NTQzMTY4LTI5MDU3MjY3MDA2ODQxNDgw' },
+{ text: 'Errors & Measurements', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDU4MjY5NTAwMDk2ODQ4LTI5MDY0Mjg0NDU5NjI5MDU2' },
+{ text: 'Magnetic Effect of Current', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4OTA4ODk4MDA1MDQ3MDE2LTI4OTM3OTcwMzA5NDUyNjg4' },
+{ text: 'Ray Optics', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI4OTY3MDQyNjEzODU4MzYwLTI4OTk5MTIyMzk4MDMwMTM2' },
+{ text: 'Atomic Structure', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDE2MTY0NzgzMzcxMzkyLTI5MDI0MTg0NzI5NDE0MzM2' },
+{ text: 'Dual Nature of Radiation and Matter', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDI1MTg3MjIyNjY5NzA0LTI5MDI2MTg5NzE1OTI1MDcy' },
+{ text: 'X-Rays', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDI3MTkyMjA5MTgwNDQwLTI5MDMxMjAyMTgyMjAxOTEy' },
+{ text: 'Nuclear Physics', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDMyMjA0Njc1NDU3MjgwLTI5MDM5MjIyMTI4MjQ0ODU2' },
+{ text: 'Radioactivity', url: 'https://chalo-098.github.io/sarulkatoken/?token=Z2V0LTI5MDQwMjI0NjIxNTAwMjI0LTI5MDQ2MjM5NTgxMDMyNDMy' }
+                ]
+            }
+            ]
+    }
+];
+
+function createCard(cardData, isSecondCard = false) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+        ${cardData.text}
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="${isSecondCard ? '#FF0000' : '#FF0000'}" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+        </svg>
+    `;
+
+    if (isSecondCard) {
+        card.classList.add('second-card');
+        card.addEventListener('click', function () {
+            const subcards = this.nextElementSibling;
+            if (subcards.style.display === 'none' || subcards.style.display === '') {
+                subcards.style.display = 'block';
+            } else {
+                subcards.style.display = 'none';
+            }
+        });
+    } else {
+        card.addEventListener('click', function () {
+            const secondCards = this.nextElementSibling;
+            if (secondCards.style.display === 'none' || secondCards.style.display === '') {
+                secondCards.style.display = 'block';
+            } else {
+                secondCards.style.display = 'none';
+            }
+        });
+    }
+
+    const subcardsContainer = document.createElement('div');
+    subcardsContainer.className = 'subcards';
+
+    cardData.subcards?.forEach(subcardData => {
+        const subcard = document.createElement('div');
+        subcard.className = 'subcard';
+        subcard.innerHTML = `
+            ${subcardData.text}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00FFFF" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                <path d="M4.715 6.542a3.025 3.025 0 0 1 0-4.27l1.795-1.796a3.025 3.025 0 0 1 4.271 0l1.795 1.796a3.025 3.025 0 0 1 0 4.27l-.69.691a.5.5 0 1 1-.708-.708l.69-.691a2.025 2.025 0 0 0 0-2.855L10.06 2.12a2.025 2.025 0 0 0-2.855 0L5.412 3.915a2.025 2.025 0 0 0 0 2.855.5.5 0 0 1-.707.707ZM11.284 9.457a3.025 3.025 0 0 1 0 4.271l-1.796 1.795a3.025 3.025 0 0 1-4.27 0L3.923 13.73a3.025 3.025 0 0 1 0-4.271l.69-.69a.5.5 0 0 1 .707.707l-.69.69a2.025 2.025 0 0 0 0 2.855l1.795 1.795a2.025 2.025 0 0 0 2.855 0l1.796-1.795a2.025 2.025 0 0 0 0-2.855.5.5 0 1 1 .707-.707Z"/>
+            </svg>
+        `;
+        subcard.addEventListener('click', () => window.open(subcardData.url, '_blank'));
+        subcardsContainer.appendChild(subcard);
+    });
+
+    cardData.secondcards?.forEach(secondCardData => {
+        const secondCard = createCard(secondCardData, true);
+        subcardsContainer.appendChild(secondCard);
+    });
+
+    const container = document.createElement('div');
+    container.appendChild(card);
+    container.appendChild(subcardsContainer);
+
+    return container;
+}
+
+function initializeCards() {
+    const cardsContainer = document.getElementById('cards-container');
+    firstcardsData.forEach(cardData => {
+        const card = createCard(cardData);
+        cardsContainer.appendChild(card);
+    });
+}
+
+initializeCards();
+</script>
+<div>
+<p style="color: #FFC900; font-size:16px;">𝗡𝗢𝗧𝗘 :- 𝐍𝐨 𝐚𝐧𝐲 𝐂𝐨𝐚𝐜𝐡𝐢𝐧𝐠 𝐡𝐚𝐫𝐦𝐞𝐝 𝐢𝐟 𝐬𝐭𝐢𝐥𝐥 𝐚𝐧𝐲 𝐩𝐫𝐨𝐛𝐥𝐞𝐦 𝐑𝐞𝐥𝐚𝐭𝐞𝐝 𝐭𝐨 𝐂𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 𝐭𝐡𝐞𝐧 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐦𝐞 𝐨𝐧 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐈 𝐑𝐞𝐦𝐨𝐯𝐞 𝐂𝐨𝐧𝐭𝐞𝐧𝐭 𝐨𝐫 𝐃𝐨𝐰𝐧 𝐭𝐡𝐢𝐬 𝐰𝐞𝐛𝐬𝐢𝐭𝐞 . 𝐒𝐨, 𝙞𝙛 𝙮𝙤𝙪 𝙝𝙖𝙫𝙚 𝙖𝙣𝙮 𝙥𝙧𝙤𝙗𝙡𝙚𝙢 𝙟𝙪𝙨𝙩 𝙘𝙤𝙣𝙩𝙖𝙘𝙩 𝙢𝙚 🙏🙏</p>
+<div style="display: flex; justify-content: center; height: 5vh;"> <button style="background-color:#FF0042; color:white; padding:5px 30px; font-size:16px; border-radius: 20px;"><a href="https://t.me/team_hiddens_bot" style="color:white; text-decoration:none;">𝗖𝗢𝗡𝗧𝗔𝗖𝗧 𝗨𝗦 🙏🙏</a></button> </div>
+</body>
+</html>
